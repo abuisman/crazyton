@@ -1,8 +1,12 @@
 # Crazyton
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/crazyton`. To experiment with that code, run `bin/console` for an interactive prompt.
+Sometimes I wanted to create something richer than a module with `module_function`, but without the `def self.` syntax of class methods.
 
-TODO: Delete this and the text above, and describe your gem
+I therefore created `Crazyton`. Under the hood it uses `method_missing` with `Singleton` to provide its functionality, which is sort of crazy, hence the name.
+
+One of the advantages of using classes over modules is that you can use inheritance.
+
+Since `Crazyton` uses a `Singleton` under the hood, you can manage state on the class without having to resort to class variables. Which is also better practice.
 
 ## Installation
 
@@ -22,7 +26,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a class and include the `Crazyton` module in order for its instance methods to be exposed as class methods:
+
+```ruby
+class Dog
+    include Crazyton
+
+    def bark
+        puts 'woof'
+    end
+end
+
+Dog.bark
+=> woof
+```
 
 ## Development
 
@@ -32,7 +49,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/crazyton.
+Bug reports and pull requests are welcome on GitHub at https://github.com/abuisman/crazyton.
 
 ## License
 

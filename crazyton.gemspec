@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name = "crazyton"
   spec.version = Crazyton::VERSION
   spec.authors = ["Achilleas Buisman"]
-  spec.email = ["accounts@abuisman.nl"]
+  spec.email = ["crazyton@abuisman.nl"]
 
   spec.summary = "Like Singleton, but without `instance`."
   spec.description = "Exposes instance methods as class methods using a Singleton under the hood."
