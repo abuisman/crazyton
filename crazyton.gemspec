@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Like Singleton, but without `instance`."
   spec.description = "Exposes instance methods as class methods using a Singleton under the hood."
-  spec.homepage = "https://abuisman.nl"
+  spec.homepage = "https://github.com/abuisman/crazyton"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
