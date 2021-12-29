@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["rubygems_mfa_required"] = true
+  spec.metadata["rubygems_mfa_required"] = "true"
   spec.metadata["source_code_uri"] = "https://github.com/abuisman/crazyton"
   spec.metadata["changelog_uri"] = "https://github.com/abuisman/crazyton/blob/master/CHANGELOG.md"
 
